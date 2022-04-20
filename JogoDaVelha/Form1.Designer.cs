@@ -49,6 +49,7 @@
             this.LbEmpate = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btnCpu = new System.Windows.Forms.Button();
             this.jogadorOne.SuspendLayout();
             this.jogadorTwo.SuspendLayout();
             this.Empate.SuspendLayout();
@@ -270,11 +271,25 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // btnCpu
+            // 
+            this.btnCpu.Location = new System.Drawing.Point(7, 341);
+            this.btnCpu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCpu.Name = "btnCpu";
+            this.btnCpu.Size = new System.Drawing.Size(108, 30);
+            this.btnCpu.TabIndex = 13;
+            this.btnCpu.TabStop = false;
+            this.btnCpu.Text = "vs CPU";
+            this.btnCpu.UseCompatibleTextRendering = true;
+            this.btnCpu.UseVisualStyleBackColor = true;
+            this.btnCpu.Click += new System.EventHandler(this.btnCpu_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 376);
+            this.Controls.Add(this.btnCpu);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Empate);
@@ -319,5 +334,6 @@
         private Label LbEmpate;
         private GroupBox groupBox1;
         private Button btnReset;
+        private Button btnCpu;
     }
 }
