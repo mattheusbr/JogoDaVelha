@@ -121,7 +121,10 @@ namespace JogoDaVelha
                 button3.Text.Equals(jogador) && button6.Text.Equals(jogador) && button9.Text.Equals(jogador) ||
                 button1.Text.Equals(jogador) && button5.Text.Equals(jogador) && button9.Text.Equals(jogador))
             {
-                MessageBox.Show($"Parabéns! {(jogador.Equals(JOGADOR_UM) ? "jogador um" : "jogador dois")} venceu!");
+                if(vsCpu)
+                    MessageBox.Show($"Parabéns! {(jogador.Equals(JOGADOR_UM) ? "jogador um" : "CPU")} venceu!");
+                else
+                    MessageBox.Show($"Parabéns! {(jogador.Equals(JOGADOR_UM) ? "jogador um" : "jogador dois")} venceu!");
                 finalizar = true;
             }
             else if (numeroJogada == 9)
