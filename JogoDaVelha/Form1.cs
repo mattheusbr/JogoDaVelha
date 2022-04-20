@@ -66,10 +66,20 @@ namespace JogoDaVelha
         }
 
         private void btnCpu_Click(object sender, EventArgs e)
-        {
+        {            
             ResetarGame();
-            this.jogadorTwo.Text = "CPU";
-            vsCpu = true;
+            if (vsCpu)
+            {
+                vsCpu = false;
+                btnCpu.Text = "vs CPU";
+                this.jogadorTwo.Text = "Jogador Dois";
+            }
+            else
+            {
+                vsCpu = true;
+                btnCpu.Text = "vs Jogador";
+                this.jogadorTwo.Text = "CPU";                
+            }                            
         }
 
         private void MarcarOpcao(Button botao)
